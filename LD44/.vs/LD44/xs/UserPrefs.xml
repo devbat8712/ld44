@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{71B831A5-ED2B-4DD6-9F9F-D1E1817A7291}|Default">
+  <MonoDevelop.Ide.ItemProperties.LD44 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LD44/Tileset.cs">
+    <Files>
+      <File FileName="LD44/Program.cs" Line="27" Column="13" />
+      <File FileName="LD44/TrixelGrid.cs" Line="35" Column="1" />
+      <File FileName="LD44/Trixel.cs" Line="15" Column="10" />
+      <File FileName="LD44/Util.cs" Line="53" Column="39" />
+      <File FileName="LD44/Tileset.cs" Line="48" Column="89" />
+      <File FileName="LD44/Sounds.cs" Line="10" Column="9" />
+      <File FileName="LD44/Tile.cs" Line="22" Column="1" />
+      <File FileName="LD44/GameState.cs" Line="9" Column="23" />
+      <File FileName="LD44/StateCity.cs" Line="14" Column="9" />
+      <File FileName="LD44/City.cs" Line="104" Column="57" />
+      <File FileName="LD44/UI.cs" Line="6" Column="18" />
+      <File FileName="LD44/StateManager.cs" Line="14" Column="30" />
+      <File FileName="LD44/StateTitle.cs" Line="19" Column="1" />
+      <File FileName="LD44/CityUI.cs" Line="24" Column="9" />
+      <File FileName="LD44/UIBar.cs" Line="11" Column="38" />
+      <File FileName="LD44/StateGameOver.cs" Line="35" Column="43" />
+      <File FileName="LD44/StaticPlayer.cs" Line="50" Column="52" />
+      <File FileName="LD44/StateTutorial.cs" Line="40" Column="71" />
+      <File FileName="LD44/StateSelfCare.cs" Line="58" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LD44" expanded="True">
+            <Node name="LD44" expanded="True">
+              <Node name="Tileset.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
