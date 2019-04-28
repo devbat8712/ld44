@@ -101,7 +101,7 @@ namespace LD44
 
                     if (t.Name == "POLICE")
                     {
-                        StaticPlayer.CityCrimeRate -= (5 / StaticPlayer.StagnationCoefficient);
+                        StaticPlayer.CityCrimeRate -= (5 / (StaticPlayer.StagnationCoefficient * 2));
                         numberOfBuildings++;
                     }
 

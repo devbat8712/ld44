@@ -39,13 +39,13 @@ namespace LD44
             SUPERMART = new Tile(LoadTexture("assets/tile/supermart.png"), "SUPERMART", 0, 20);
             GAS = new Tile(LoadTexture("assets/tile/gas.png"), "GAS", 0, 15);
             OFFICE = new Tile(LoadTexture("assets/tile/office.png"), "OFFICE", 0, 50);
-            HIGHRISE = new Tile(LoadTexture("assets/tile/highrise.png"), "HIGHRISE", 50, 0);
-            HOUSE = new Tile(LoadTexture("assets/tile/house.png"), "HOUSE", 40, 0);
-            SHACK = new Tile(LoadTexture("assets/tile/shack.png"), "SHACK", 10, 0);
-            POLICE = new Tile(LoadTexture("assets/tile/police.png"), "POLICE", 0, 10);
+            HIGHRISE = new Tile(LoadTexture("assets/tile/highrise.png"), "HIGHRISE", 25, 0);
+            HOUSE = new Tile(LoadTexture("assets/tile/house.png"), "HOUSE", 15, 0);
+            SHACK = new Tile(LoadTexture("assets/tile/shack.png"), "SHACK", 5, 0);
+            POLICE = new Tile(LoadTexture("assets/tile/police.png"), "POLICE", 0, 20);
             GYM = new Tile(LoadTexture("assets/tile/gym.png"), "GYM", 15, 0);
             BAR = new Tile(LoadTexture("assets/tile/bar.png"), "BAR", 20, 0);
-            PLAYGROUND = new Tile(LoadTexture("assets/tile/playground.png"), "PLAYGROUND", 10, 0);
+            PLAYGROUND = new Tile(LoadTexture("assets/tile/playground.png"), "PLAYGROUND", 20, 0);
 
             NODRAW = new Tile(new Texture2D(), "NODRAW", 0, 0);
         }

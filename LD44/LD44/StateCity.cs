@@ -38,7 +38,7 @@ namespace LD44
             ui = new CityUI("assets/ui/overlay_city.png");
 
             Tileset.InitializeTiles();
-            pallete = new Tile[] { Tileset.GRASS, 
+            pallete = new Tile[] { //Tileset.GRASS, 
                 //Tileset.ROAD_STRAIGHT, Tileset.ROAD_TURN, Tileset.ROAD_T,
                 Tileset.SUPERMART, Tileset.GAS, Tileset.OFFICE,
                 Tileset.HIGHRISE, Tileset.HOUSE, Tileset.SHACK,
@@ -126,6 +126,22 @@ namespace LD44
             }
         }
 
+        public void RefreshTileMap(ref Tile[,] tilemap)
+        {
+            Tile[,] newTilemap = new Tile[WIDTH, HEIGHT];
+            MakeTileMapBlank(ref newTilemap, WIDTH, HEIGHT, Tileset.NODRAW);
+
+            for (int x = 0; x < WIDTH; x++)
+            {
+                for (int y = 0; y < HEIGHT; y++)
+                {
+                    newTilemap[x, y] = new Tile(tilemap[x, y]);
+                }
+            }
+
+            tilemap = newTilemap;
+        }
+
         public void IncreasePallete()
         {
             palleteIndex++;
@@ -150,7 +166,7 @@ namespace LD44
                     StaticPlayer.TimeHour++;
                     StaticPlayer.TimeMinute = 0;
 
-                    if (StaticPlayer.TimeHour == 24)
+                    if (StaticPlayer.TimeHour == 12)
                     {
                         StaticPlayer.TimeHour = 0;
                         StaticPlayer.TimeMinute = 0;
@@ -167,11 +183,11 @@ namespace LD44
 
             if (StaticPlayer.TimeHour < 5)
             {
-                DrawTileMap(tiles, BLACK, false, WIDTH, HEIGHT);
+                DrawTileMap(tiles, GRAY, false, WIDTH, HEIGHT);
             } 
             else if (StaticPlayer.TimeHour > 18)
             {
-                DrawTileMap(tiles, BLACK, false, WIDTH, HEIGHT);
+                DrawTileMap(tiles, GRAY, false, WIDTH, HEIGHT);
             }
             else
             {
@@ -193,7 +209,7 @@ namespace LD44
             DrawText("tile @ cursor: " + tiles[mouse.CursorTileX, mouse.CursorTileY].Name, 0, 30, 10, WHITE);
             DrawText("tile selected: " + pallete[palleteIndex].Name, 0, 40, 10, WHITE);
 
-            if (IsMouseButtonDown(MOUSE_LEFT_BUTTON))
+            if (IsMouseButtonReleased(MOUSE_LEFT_BUTTON))
             {
                 //Console.WriteLine("mouse click");
                 if (!CheckCollisionPointRec(GetMousePosition(), ui.selfCareButton))
@@ -208,7 +224,7 @@ namespace LD44
 
                             if (pallete[palleteIndex].Name != "GRASS")
                                 if (!pallete[palleteIndex].Name.Contains("ROAD"))
-                                    StaticPlayer.AddToCityHealth(10);
+                                    StaticPlayer.AddToCityHealth(30);
                             StaticPlayer.TurnsSinceLastAction = 0;
                             StaticPlayer.StagnationCoefficient = 1;
                             PlaySound(Sounds.PLACE);
